@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
+    <title>Hubert Łuszkiewicz - Software Engineer</title>
+  </head>
+  <body class="bg-dark">
+    <style>
+        :root {
+            --main-color: #ff5231;
+            --bg-color: #141414;
+            --navbar-color: rgba(40, 40, 40, 0.99)
+        }
+
+        :root[theme='light'] {
+            --main-color: #ff5231;
+            --bg-color: #ffffff;
+            --navbar-color: #ffffff
+        }
+        
+        /* html, body {
+            overscroll-behavior-y: none;
+        } */
+
+        body {
+            background-color: var(--bg-color) !important;
+            font-family: "TASA Explorer", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        
+        .navbar {
+            background-color: transparent !important;
+            transition: all 0.35s ease;
+        }
+
+        .navbar-small-start-bg {
+            background-color: #282828 !important;
+        }
+        
+        .navbar.scrolled {
+            background-color: var(--navbar-color) !important; /* A solid dark color */
+            /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; */
+        }
+
+        .navtop-text {
+            font-weight: 700;
+        }
+        
+        .nav-link.nav-text.active {
+            color: var(--main-color) !important; 
+        }
+
+        .nav-link.nav-text:hover {
+            color: var(--main-color) !important; 
+        }
+
+        .nav-link.nav-text:focus {
+            color: var(--main-color) !important; 
+        }
+
+        #home, #about, footer {
+            background-color: var(--bg-color);
+            overflow: hidden;
+        }
+
+        #projects {
+            border-top-color: #ff5231;
+           
+            border-top-width: 1px;
+            border-top-style: solid;
+        }
+
+        #about {
+            border-top-color: #ff5231;
+            
+            border-top-width: 1px;
+            border-top-style: solid;
+        }
+
+        #contact {
+            border-top-color: #ff5231;
+            border-top-style: solid;
+            border-top-width: 1px;
+        }
+
+        .hello-text, .software-engineer-text {
+            transform: translateX(0);
+            /* transition: transform 1.6s ease-in-out; */
+            font-size: 7vw;
+        }
+
+        @media screen and (min-width: 576px) {
+            .hello-text, .software-engineer-text {
+                font-size: 4vw;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .hello-text, .software-engineer-text {
+                font-size: 4vw;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .hello-text, .software-engineer-text {
+                font-size: 4vw;
+            }
+        }
+
+        
+
+        .red-text {
+            color: var(--main-color);
+            font-weight: 600;
+        }
+
+        .check-me-out-button {
+            border-color: var(--main-color) !important;
+            color: var(--main-color);
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+
+        .check-me-out-button:hover {
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: var(--main-color);
+            color: white;
+        }
+
+        .arrow-down {
+            transform: rotate(90deg);
+            display: inline-block;
+        }
+
+        .section-header-container {
+            /* border-bottom-color: rgb(255, 82, 47);
+            border-bottom-width: 3px;
+            border-bottom-style: solid; */
+        }
+
+        .section-header {
+            font-weight: 700;
+            border-bottom-color: var(--main-color);
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover {
+            padding-left: 30px;
+            padding-right: 30px;
+            opacity: 0.8;
+        }
+
+        section {
+            padding-top: 72px;
+            padding-bottom: 72px;
+            overflow: hidden;
+            
+        }
+
+        #pro-text {
+            color: var(--main-color);
+            font-weight: 700;
+        }
+
+        /* .card-img-top-container {
+            height: 16em;
+        } */
+
+        /* .card-img-top {
+            object-fit: cover;
+        } */
+
+        .card-title {
+           /* white-space: nowrap; */
+        }
+
+        .card-text {
+            /* line-height: 1.5em;
+            max-height: 4.5em;
+            overflow: hidden; */
+        }
+
+        .card {
+            opacity: 0.8;
+        }
+        .card:hover {
+            opacity: 1;
+            transition: all 0.4s;
+        }
+
+        .card-img-top {
+            transition: all 0.4s ease;
+        }
+
+        /* .card-img-top:hover {
+            opacity: 0.6;
+        } */
+
+        /* .card-img-top {
+            height: 100% !important;
+        } */
+
+        .aboutme-image-container {
+            background-image: url("images/graduation.png");
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
+        .technology-icon-container {
+            flex: 1;
+        }
+
+        .technology-icon {
+            width: 40%;
+        }
+
+        .technology-icon:hover {
+            opacity: 0.7;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0
+        }
+
+        .skills-list li {
+            position: relative;
+            padding-left: 2rem;
+            text-align: start;
+        }
+
+        .skills-list li::before {
+            content: "👉";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1rem 
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input, textarea {
+            background-color: rgb(20,20,20) !important;
+            border-color: var(--main-color) !important;
+            border-radius: 0 !important;
+            color: white !important;
+        }
+
+        ::placeholder {
+            color: gray !important;
+        }
+
+        
+        .section-header-container {
+            transition: all 0.35s ease;
+        }
+        .social-media-icon-container:hover {
+            box-shadow: 0px 2px 4px #ff5231;
+        }
+
+        .social-media-icon {
+            width: 70%;
+        }
+
+        @media screen  and (min-width: 768px){
+            .social-media-icon {
+                width: 50%;
+            }
+        }
+
+        @media screen  and (min-width: 992px){
+            .social-media-icon {
+                width: 70%;
+            }
+        }
+
+        
+
+        
+
+        .linkedin-icon {
+            text-align: left !important;
+        }
+
+        .strava-icon {
+            text-align: right !important;
+        }
+
+        @media screen and (min-width: 576px){
+            .help-text, .contact-text {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (min-width: 992px){
+            .help-text, .contact-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        
+
+        .footer-name, .footer-email {
+            font-weight: 700;
+        }
+        
+        footer {
+            border-top-style: solid;
+            border-width: 1px;
+        }
+
+        .card div div img:hover {
+            opacity: 0.7;
+        }
+
+        .home-row {
+            width: 100vw;
+        }
+        @media screen and (min-width: 576px){
+            .home-row {
+                width: 60vw;
+            }
+            
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3 shadow-sm" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand nav-text navtop-text" href="#home">Hubert Łuszkiewicz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="home-button nav-link nav-text navtop-text active" href="#home">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="about-button nav-link nav-text navtop-text" href="#about">O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="projects-button nav-link nav-text navtop-text" href="#projects">Projekty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="contact-button nav-link nav-text navtop-text" href="#contact">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-none language-button btn nav-text navtop-text">🇵🇱</a>
+                    </li>
+                    <li>
+                        <a class="d-none theme-button btn nav-text navtop-text">
+                            ☀️
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home min-vh-100 d-flex flex-column justify-content-end justify-content-sm-around" id="home" style="z-index: 1; box-shadow: 0px 2px 5px #ff5231;">
+        <div style="position: absolute; height: 100%; width: 100%; top: 0; opacity: 0.5;" class="d-sm-none">
+            <img src="images/7b99ed38-ad3b-4070-9b6c-c30b4c901d79.jpg" alt="" style="object-fit: cover; object-position: top; width: 100%; height: 100%;">
+        </div>
+        <!-- <div class="d-flex justify-content-center">
+            <div class="d-sm-none" style="border-radius: 100%; width: 55%; aspect-ratio: 1 / 1; display: flex; border-radius: 100%; overflow: hidden;">
+                <img src="7b99ed38-ad3b-4070-9b6c-c30b4c901d79.jpg" alt="" style="width: 100%; object-fit: cover;">
+            </div>
+            <div class="d-none d-lg-none" style="border-radius: 100%; width: 40%; aspect-ratio: 1 / 1; display: flex; border-radius: 100%; overflow: hidden;">
+                <img src="7b99ed38-ad3b-4070-9b6c-c30b4c901d79.jpg" alt="" style="width: 100%; object-fit: cover;">
+            </div>
+            
+        </div> -->
+        <div class="container-fluid justify-content-start">
+            <div class="row home-row p-sm-5">
+            <div class="greeting-container" style="z-index: 2; position: relative;">
+                <!-- <div class="d-lg-none" style="height: 30rem;">
+
+                </div> -->
+                <div class="text-start text-white p-1 mb-3" >
+                    <div class="hello-text-container d-flex justify-content-start">
+                        <h1 style="text-shadow: 0px 2px 4px rgba(0,0,0,1)" class=" display-4"><span class="red-text">&lt</span></h1>
+                    </div>
+                    <div class="hello-text-container d-flex justify-content-start">
+                        <h1 style="text-shadow: 0px 2px 4px rgba(0,0,0,1)" class="hello-text h3">Cześć,</h1>
+                    </div>
+                    <div class="hello-text-container d-flex justify-content-start">
+                        <h1 style="text-shadow: 0px 2px 4px rgba(0,0,0,1)" class="hello-text h3">jestem Hubert 👋</h1>
+                    </div>
+                    <div class="software-engineer-text-container d-flex justify-content-start">
+                        <p class="software-engineer-text display-4 m-0" style="text-shadow: 0px 2px 4px rgba(0,0,0,1);">Software Engineer</p>
+                    </div>
+                    <div class="software-engineer-text-container d-flex justify-content-start">
+                        <p class=" display-6 m-0" style="text-shadow: 0px 2px 4px rgba(0,0,0,1);"><span class="red-text">/&gt</span></p>
+                    </div>
+                </div>
+                <div class="row pb-4 d-flex justify-content-start">
+                    <div class="d-flex justify-content-between" style="width: 17rem;">
+                        <div class="">
+                            <a href="https://www.github.com/HubertLuszkiewicz" target="_blank">
+                                <img class="home-page-github-icon" src="images/github_733553.png" alt="github icon" style="width: 3rem;">
+                            </a>
+                        </div>
+                        
+                        <div class="">
+                            <a href="mailto:hluszkiewicz@gmail.com" target="_blank">
+                                <img class="home-page-github-icon" src="images/gmail_5968534.png" alt="gmail icon" style="width: 3rem;">
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href="https://www.linkedin.com/in/hubert-%C5%82uszkiewicz-39b8a427b/" target="_blank">
+                                <img src="images/linkedin.png" alt="linkedin icon" style="width: 3rem;">
+                            </a>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-start pb-5 pb-sm-0">
+                            <a class="btn check-me-out-button mt-2" href="#projects" style="box-shadow: 0px 2px 4px #ff5231">
+                                <h5 class="mb-0" style="text-shadow: 0px 2px 4px rgba(0,0,0,1); font-weight: bold;">
+                                    <span class="arrow-down">➜</span> Moje Projekty <span class="arrow-down"> ➜</span>
+                                </h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="d-none d-sm-flex" style="position: absolute; top: 0rem; right: 0; z-index: 1;">
+            <img src="images/7b99ed38-ad3b-4070-9b6c-c30b4c901d79.jpg" alt="" style="width: 40vw; height: 100vh; object-fit: cover; opacity: 0.6;">
+        </div>
+        
+    </section>
+
+    <section class="about d-flex align-items-start" id="about" style="box-shadow: 0px 2px 5px #ff5231;">
+        <div class="container text-start text-white" style="z-index: 2;">
+            <div class="d-flex justify-content-center pt-4 pb-4 pb-md-4">
+                <h1 class="section-header display-5" style="text-align: start;">O <span id="pro-text">mnie</span></h1>
+            </div>
+            <div class="row align-items-center justify-content-around">
+                <div class="col-md-6 col-lg-5 text-center mb-4 d-flex flex-column align-items-center">
+                    <div class="mb-5 pt-4" style="flex: 1; position: relative;">
+                        <h4 class="fw-bolder pb-4" style="text-align: start;">
+                            Kilka słów o mnie
+                        </h4>
+                        <div style="z-index: 2; text-align: start;">
+                            Jestem full-stack developerem z pasją do przetwarzania danych, 
+                            Machine Learning'u i AI. Praca z danymi jest moją najmocniejszą stroną.
+                            Mój ulubiony język programowania to Python. To właśnie z użyciem jego i 
+                            licznych bibliotek najczęściej tworzę projekty.
+                            <!-- <div class="pb-1"></div> --><br>
+                            Innym obszarem, w którym rozwinąłem swoje umiejętnośi to web development.
+                            Potrafię tworzyć strony internetowe z wykorzystaniem podstawowych narzędzi:
+                            HTML, CSS, Java Script, ale także bardziej zaawansowanych technologii:
+                            Bootstrap, React.
+                            <!-- <div class="pb-1"></div> --><br>
+                            Temat mojej pracy inżynierskiej to "Przewodnik po Politechnice Poznańskiej". 
+                            Wraz z kolegami z roku stworzyliśmy aplikację mobilną, która służyć miała do
+                            nawigacji po terenie kampusu.
+                            W marcu tego roku zdecydowałem się kontynuować studia na specjalności Technologie
+                            Przetwarzania Danych.
+                        </div>
+                        
+                    </div>
+                    <div class="aboutme-image-container pt-4 mt-5 mb-sm-5" style="flex: 1">
+                        <h4 class="fw-bolder pb-4 pt-4" style="text-align: start;">
+                            Wykształcenie 👨‍🎓
+                        </h4>
+                        <div class="row justify-content-around">
+                            <div class="col-1">
+                                <div>
+                                    10.2021
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex flex-column align-items-center">
+                                <div>
+                                    ●
+                                </div>
+                            <div style="height: 14rem; width: 0px; border-style: solid; border-width: 1px;"></div>
+                            </div>
+                            <div class="col-6">
+                                <div style="text-align: start;">
+                                    Rozpoczęcie studiów Inżynierskich na Politechnice Poznańskiej [Informatyka]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-around">
+                            <div class="col-1">
+                                <div>
+                                    02.2025
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex flex-column align-items-center">
+                                <div>
+                                    ●
+                                </div>
+                                <div style="height: 3rem; width: 0px; border-style: solid; border-width: 1px;"></div>
+                            </div>
+                            <div class="col-6">
+                                <div style="text-align: start;">
+                                    Obrona pracy inżynierskiej 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-around">
+                            <div class="col-1">
+                                <div>
+                                    03.2025
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex flex-column align-items-center">
+                                <div>
+                                    ●
+                                </div>
+                                <div style="height: 6rem; width: 0px; border-style: solid; border-width: 1px;"></div>
+                            </div>
+                            <div class="col-6">
+                                <div style="text-align: start;">
+                                    Rozpoczęcie studiów Magisterskich <br>[Technologie Przetwarzania Danych]
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-around">
+                            <div class="col-1">
+                                <div>
+                                    07.2026
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex flex-column align-items-center">
+                                <div>
+                                    ●
+                                </div>
+                                
+                            </div>
+                            <div class="col-6">
+                                <div style="text-align: start;">
+                                    Przewidywana data ukończenia studiów
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class=" col-md-6 col-lg-5 text-center mb-4 mt-5 d-flex flex-column justify-content-between" style="height: 100%;">
+                    
+                    <div class="pt-4 mb-5" style="flex: 1">
+                        
+                        <h4 class="fw-bolder pb-4 mt-5 pt-5" style="text-align: start;">
+                            Umiejętności 💻
+                        </h4>
+                        <div>
+                            <ul style="z-index: 2; position: relative;" class="skills-list">
+                                <li class="pb-3">
+                                    Tworzenie modeli uczenia maszynowego z użyciem Pythona i bibliotek: scikit-learn,
+                                    pandas, numpy.
+                                </li>
+                                <li class="pb-3">
+                                    Przygotowanie danych do analizy: eliminacja obserwacji odstających, wybór
+                                    atrybutów, zastąpienie wartości pustych.
+                                </li>
+                                <li class="pb-3">
+                                    Podstawy przetwarzania Big Data: Tworzyłem skrypty wykorzystujące
+                                    Apache Spark w przetwarzaniu batchowym, jak również strumieniowym (Spark Structured Streaming,
+                                    Kafka). 
+                                </li>
+                                <li class="pb-3">
+                                    Podstawy przetwarzania w Chmurze: Tworzyłem i uruchamiałem programy na maszynach wirtualnych z użyciem GCP.
+                                </li>
+                                <li class="pb-3">
+                                    Konteneryzacja z użyciem Dockera.
+                                </li>
+                                <li class="pb-3">
+                                    Git i GitHub
+                                </li>
+                                <li class="pb-3">Tworzenie endpointów i komunikacja z użyciem Rest API</li>
+                                <li class="pb-3">Tworzenie stron internetowych z użyciem React lub HTML/CSS/JS + Bootstrap</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-5" style="flex: 1; position: relative; z-index: 2;">
+                        <div style="z-index: 2; position: relative">
+                            <h4 class="fw-bolder pb-4" style="text-align: start;">
+                            Zainteresowania 🏃🚴
+                        </h4>
+                        <div style="z-index: 2; text-align: start;">
+                            W ostatnim czasie zainteresowałem się sztuczną inteligencją. Dołączyłem do koła naukowego Ghost
+                            na Politechnice Poznańskiej, gdzie poszerzam swoje horyzonty.
+                            <br>
+                            <div class="pb-3"></div>
+                            W wolnych chwilach pasjonuje mnie aktywność fizyczna. Uprawiam sporty wytrzymałościowe:
+                            bieganie, pływanie oraz kolarstwo. Moje poczynania w tej kwestii można śledzić w aplikacji <a style="color: #fc5200;" href="https://www.strava.com/athletes/91354575">Strava.</a></span>
+                            <br>
+                            <div class="pb-3"></div>
+                            Od 2 latach wraz ze znajomymi jeździmy na kolarskie wyprawy bikepackingowe. Mamy za sobą trasę
+                            ze Szczecina 🇵🇱 do Amsterdamu 🇳🇱 oraz z Oslo 🇳🇴 do Trelleborga 🇸🇪.
+                        </div>
+                        </div>
+                        
+                        <div style="position: absolute; z-index: 1; bottom: -3rem; right: -5rem; height: 70%; border-radius: 100%; overflow: hidden;">
+                            <img src="images/ad7d89c7-6344-45e5-989e-704fe97f802b.jpg" alt="" style="height: 100%; opacity: 0.4; aspect-ratio: 1 / 1; object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="projects d-flex align-items-center bg-black" id="projects" style="z-index: 2; box-shadow: 0px 2px 5px #ff5231;">
+        <div class="container text-start text-white" style="z-index: 2;">
+            <div class="section-header-container d-flex justify-content-center py-4 mb-4 display-5">
+                <h1 class="display-6 section-header">Moje <span id="pro-text">Pro</span>jekty</h1>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem">
+
+                            <img class="card-img-top" src="images/personal-notes-chatbot.png" alt="Project icon" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Personal Notes Chatbot</h5>
+                            <p class="card-subtitle">
+                                Stworzyłem chatbota służacego do wyszukiwania informacji w osobistych notatkach. Wykorzystałem RAG, API modelu językowego od Google - Gemini, a także bazę danych PostgreSQL z rozszerzeniem Pgvector do przechowywania embeddingów. Projekt zaprezentowałem na spotkaniu koła naukowego.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://www.python.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/python_1822899.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" alt="Python Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://www.postgresql.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/postgre_5968342.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="PostreSQL" alt="PostreSQL Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://www.docker.com/"  target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/docker.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Docker" alt="Docker Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://ai.google.dev/api?lang=python" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/gemini-color.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Google Gemini" alt="Google Gemini Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://blog.postman.com/rest-api-examples/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/api_8297437.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Rest API" alt="Rest API Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/PersonalNotesChatbot" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem;">
+
+                            <img class="card-img-top" src="images/ocr-system.png" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">OCR System</h5>
+                            <p class="card-subtitle">
+                                Współtworzyłem system do rozpoznawania znaków w dokumentach PDF i na zdjęciach. Stworzyłem własy model ML do ekstrakcji tekstu z dokumentów PDF. Projekt realizowany dla Komisji Nadzoru Finansowego, a także jako zaliczenie przedmiotu Hurtownie Danych.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://www.python.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/python_1822899.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" alt="Python Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://opencv.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/OpenCV.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="OpenCV" alt="OpenCV Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://scikit-learn.org/stable/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/scikit-learn.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="scikit-learn" alt="scikit-learn Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://numpy.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/NumPy.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Numpy" alt="Numpy Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://matplotlib.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Matplotlib.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Matplotlib" alt="Matplotlib Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/RemoteControlledCar" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem">
+
+                            <img class="card-img-top" src="images/retina-detection.JPG" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Retina Detect</h5>
+                            <p class="card-subtitle">
+                                Ten projekt to moja pierwsza styczność z przetwarzaniem obrazu. 
+                                Zadanie polegało na wykrywaniu naczyń krwionośnych na obrazach dna oka z wykorzystaniem Uczenia Maszynowego i technik przetwarzania obrazu.
+                                Powyższa ilustracjia przedstawia jeden z przykładowych obrazów, które przetwarzałem.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://www.python.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/python_1822899.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" alt="Python Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://scikit-image.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/skimage.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Skimage" alt="skimage Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://scikit-learn.org/stable/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/scikit-learn.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="scikit-learn" alt="scikit-learn Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://numpy.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/NumPy.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Numpy" alt="Numpy Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://matplotlib.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Matplotlib.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Matplotlib" alt="Matplotlib Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/RetinaDetect" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem">
+
+                            <img class="card-img-top" src="images/web-scraper.png" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">OLX Web Scraper</h5>
+                            <p class="card-subtitle">
+                                Chcesz zacząć udzielać korepetycji i zastanawiasz się jaka stawka jest odpowiednia? 
+                                A może dostałeś nietrafiony prezent i chcesz dowiedzieć się za jaką kwotę wystawić go na sprzedaż? 
+                                Porównaj ceny na OLX z użyciem mojego autorskiego narzędzia.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://www.python.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/python_1822899.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" alt="Python Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://www.microsoft.com/pl-pl/power-platform/products/power-bi" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/powerbi.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Power BI" alt="Power BI Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://blog.postman.com/rest-api-examples/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/api_8297437.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Rest API" alt="Rest API Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://pandas.pydata.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Pandas.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Pandas" alt="Pandas Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/RetinaDetect" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem">
+
+                            <img class="card-img-top" src="images/run-lift-merged.png" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Run Lift App</h5>
+                            <p class="card-subtitle">
+                                Słyszałaś/eś kiedyś o aplikacji mobilnej, w której sprawdzisz pogodę
+                                i zmierzysz czasy okrążeń na bieżni? Ja też nie, dlatego zdecydowałem się taką stworzyć
+                                jako projekt zaliczeniowy na przedmiot Aplikacje Mobilne.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://developer.android.com/compose" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/jetpack compose icon_RGB.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Jetpack Compose" alt="Jetpack Compose Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://kotlinlang.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Kotlin.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Kotlin" alt="Kotlin Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://developer.android.com/studio?hl=pl" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Android Studio.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Android Studio" alt="Android Studio Icon" style="width: 10%;" class="pe-1">
+                                </a>
+
+                                <a href="https://blog.postman.com/rest-api-examples/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/api_8297437.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Rest API" alt="Rest API Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/RunLift" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 bg-dark bg-gradient text-white">
+                        <div class="card-img-wrapper" style="height: 15rem">
+
+                            <img class="card-img-top" src="images/remote-controlled-car.jpg" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Zdalnie Sterowany Samochód</h5>
+                            <p class="card-subtitle">
+                                Ten projekt pomógł mi lepiej zrozumieć Systemy Wbudowane. Wykorzystałem budżetowy mikrokontroler - Raspberry Pi Pico do stworzenia projektu łączącego wiedzę z dziedziny Informatyki i elektroniki.
+                            </p>
+                            <div class="card-icons-container pt-2">
+                                <a href="https://www.python.org/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/python_1822899.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Python" alt="Python Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                                
+                                <a href="https://www.raspberrypi.com/" target="_blank" class="btn d-inline ps-0">
+                                    <img src="images/Raspberry Pi.png" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Raspberry Pi" alt="Raspberry Pi Icon" style="width: 10%;" class="pe-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" href="https://github.com/HubertLuszkiewicz/RemoteControlledCar" class="btn check-me-out-button">Otwórz na GitHubie</a>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>     
+            <div class="d-flex justify-content-center py-3 ">
+                <a href="https://github.com/HubertLuszkiewicz"  target="_blank" class="btn check-me-out-button mt-2 display-3" href="#projects">Zobacz pozostałe projekty na GitHubie</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="contact d-flex align-items-start bg-black" id="contact" style="box-shadow: 0px 2px 5px #ff5231;">
+        <div class="container text-start text-white">
+            <div class="d-flex justify-content-center py-4">
+                <h1 class="section-header display-5">Kontakt<span id="pro-text"></span></h1>
+            </div>
+
+            <div class="row justify-content-around align-items-center">
+                
+                <div class="col-sm-12 col-lg-5">
+                    <div>
+                        <h4 style="font-weight: bold;">
+                            Skontaktuj się ze mną
+                        </h4>
+                        <p>Odpowiem tak szybko jak to możliwe :)</p>
+                    
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="post" class="d-flex flex-column">
+                        <input type="hidden" name="access_key" value="bbd5e9fe-a754-40d1-bf91-fc4d0bc8fdff">
+                        <div class="form-group mb-3">
+                            <!-- <label for="name">Imię</label> -->
+                            <input type="text" name="Imię" class="form-control" id="name" placeholder="Imię">
+                        </div>
+                        <div class="form-group mb-3">
+                            <!-- <label for="email">Adres email</label> -->
+                            <input type="email" name="Email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                        </div>
+                        <div class="form-group mb-3">
+                            <!-- <label for="textarea">Jak mogę Ci pomóc?</label> -->
+                            <textarea name="Wiadomość" class="form-control" id="textarea" rows="5" placeholder="Twoja wiadomość..."></textarea>
+                        </div>
+                        <input type="hidden" name="redirect" value="https://hublus.z36.web.core.windows.net/thanks.html">
+                        <button type="submit" class="btn check-me-out-button">Wyślij</button>
+                    </form>
+                    <div class="mt-3 mt-lg-0 justify-content-center d-flex py-3">
+                        <div style="flex: 1" class="d-flex justify-content-center p-0 social-media-icon-container">
+                            <a class="text-center" href="https://www.linkedin.com/in/hubert-%C5%82uszkiewicz-39b8a427b/" target="_blank">
+                                <img class="social-media-icon btn" src="images/linkedin.png" alt="linkedin icon">
+                            </a>
+                        </div>
+                        <div style="flex: 1" class="d-flex justify-content-center p-0 social-media-icon-container">
+                            <a class="text-center flex-1" href="https://github.com/HubertLuszkiewicz" target="_blank">
+                                <img class="social-media-icon btn" src="images/github_733553.png" alt="github icon">
+                            </a>
+                        </div>
+                        
+                        <div style="flex: 1" class="d-flex justify-content-center p-0 social-media-icon-container">
+                            <a class="text-center flex-1" href="https://www.facebook.com/profile.php?id=100006261753202" target="_blank">
+                                <img class="social-media-icon btn" src="images/facebook.png" alt="facebook icon">
+                            </a>
+                        </div>
+                        
+                        <div style="flex: 1;" class="d-flex justify-content-center p-0 social-media-icon-container" >
+                            <a class="text-center" href="mailto:hluszkiewicz@gmail.com" target="_blank">
+                                <img class="social-media-icon btn" src="images/gmail_5968534.png" alt="gmail icon">
+                            </a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-4 justify-content-end d-none d-lg-flex flex-column">
+                    <div style="width: 100%; border-radius: 30%; overflow: hidden;" class="mb-4">
+                        <img src="images/ad7d89c7-6344-45e5-989e-704fe97f802b.jpg" alt="" style="width: 100%; object-fit: cover; object-position: center; aspect-ratio: 1 / 1;">
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="xdd"></div>
+
+    <footer class="bg-dark shadow" data-bs-theme="dark">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-5 order-3 order-md-1">
+                    <p class="footer-name text-white">© 2025 Hubert Łuszkiewicz</p>
+                    <p class="footer-email text-white">hluszkiewicz@gmail.com</p>
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-start pb-2 order-2">
+                    <h5 class="text-white pt-3 pt-md-0 ">Social media</h5>
+                    <a target="_blank" class="btn ps-0 text-white" href="https://github.com/HubertLuszkiewicz">Github</a>
+                    <a target="_blank" class="btn ps-0 text-white" href="https://www.linkedin.com/in/hubert-%C5%82uszkiewicz-39b8a427b/">LinkedIn</a>
+                    <a target="_blank" class="btn ps-0 text-white" href="https://www.facebook.com/profile.php?id=100006261753202">Facebook</a>
+                    <a href="https://www.strava.com/athletes/91354575" target="_blank" class="btn ps-0 text-white">Strava</a>
+                </div>
+                <div class="col-md-3 d-flex flex-column align-items-start order-1 order-md-3">
+                    <h5 class="text-white">Nawigacja</h5>
+                    <a class="home-button nav-link nav-text btn text-white py-1" href="#home">Strona główna</a>
+                    <a class="about-button nav-link btn nav-text text-white py-1" href="#about">O mnie</a>
+                    <a class="projects-button nav-link btn nav-text text-white py-1" href="#projects">Projekty</a>
+                    <a class="contact-button nav-link btn nav-text text-white py-1" href="#contact">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+    </script>
+    <script>
+        document.body.addEventListener('touchstart', function() {});
+    </script>
+    <script>
+        // Get the navbar element
+        const navbar = document.querySelector('.navbar');
+
+        // Set the scroll threshold (how far down you need to scroll for the change to happen)
+        const scrollThreshold = 10;
+
+        // Add a scroll event listener to the window
+        window.addEventListener('scroll', () => {
+            // Check if the vertical scroll position is greater than the threshold
+            if (window.scrollY > scrollThreshold) {
+                // If so, add the 'scrolled' class
+                navbar.classList.add('scrolled');
+            } else {
+                // Otherwise, remove the 'scrolled' class
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script>
+        const languageButton = document.querySelector('.language-button');
+        languageButton.addEventListener('click', () => {
+            if (languageButton.textContent === '🇵🇱') {
+                languageButton.textContent = '🇬🇧'
+            } else {
+                languageButton.textContent = '🇵🇱'
+            }
+        })
+    </script>
+    <script>   
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                const currentActive = document.querySelectorAll('.nav-link.active');
+                this.classList.add('active');
+
+                const allButtons = document.querySelectorAll(`.${this.classList[0]}`)
+                allButtons.forEach(but => {
+                    but.classList.add('active')
+                })
+
+                currentActive.forEach(act => {
+                    if (act.classList[0] !== this.classList[0]) {
+                        act.classList.remove('active');
+                    }
+                })
+
+                const navbarCollapse = document.getElementById('navbarNav')
+                const isExpanded = navbarCollapse.classList.contains('show')
+                // console.log(isExpanded)
+
+                if (isExpanded) {
+                    navbar.classList.remove('navbar-small-start-bg')
+                    navbarToggler.click()
+                }
+                
+                
+                
+                
+            });
+        });
+
+        navbarToggler.addEventListener('click', () => {
+            // const nav = document
+            const navbarCollapse = document.getElementById('navbarNav')
+            const nav = document.querySelector('nav')
+            console.log(navbarCollapse)
+            console.log(navbarCollapse.style.height)
+            console.log(navbarCollapse.style.height === "")
+            if (navbarCollapse.style.height === "") {
+                nav.classList.remove('navbar-small-start-bg')
+            } else {
+                nav.classList.add('navbar-small-start-bg')
+            }
+            // console.log(isExpanded)
+            
+
+            
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.net.min.js"></script>
+    <script>
+
+        // const home_bg = VANTA.NET({
+        // el: "#home",
+        // color: 0xff5231,
+        // backgroundColor: 0x141414,
+        // points: 11.00,
+        // maxDistance: 10.00,
+        // spacing: 20.00,
+        // mouseControls: false,
+        // touchControls: false
+        // });
+
+        const projects_bg = VANTA.NET({
+        el: "#projects",
+        color: 0xff5231,
+        backgroundColor: 0x141414,
+        points: 11.00,
+        maxDistance: 10.00,
+        spacing: 20.00,
+        mouseControls: false,
+        touchControls: false
+        });
+
+        const about_bg = VANTA.NET({
+        el: "#about",
+        color: 0xff5231,
+        backgroundColor: 0x141414,
+        points: 11.00,
+        maxDistance: 10.00,
+        spacing: 20.00,
+        mouseControls: false,
+        touchControls: false
+        });
+
+        const contact_bg = VANTA.NET({
+        el: "#contact",
+        color: 0xff5231,
+        backgroundColor: 0x141414,
+        points: 11.00,
+        maxDistance: 10.00,
+        spacing: 20.00,
+        mouseControls: false,
+        touchControls: false
+        });
+
+        const getVantaColors = () => {
+            const rootStyles = getComputedStyle(document.documentElement);
+            const vantaColorHex = rootStyles.getPropertyValue('--main-color').trim();
+            const vantaBgColorHex = rootStyles.getPropertyValue('--bg-color').trim();
+
+            const vantaColor = parseInt(vantaColorHex.replace('#', '0x'));
+            const vantaBgColor = parseInt(vantaBgColorHex.replace('#', '0x'));
+
+            return {
+                color: vantaColor,
+                backgroundColor: vantaBgColor
+            }
+        }
+
+        const themeButton = document.querySelector('.theme-button');
+        const html = document.documentElement;
+        themeButton.addEventListener('click', () => {
+
+            const colors = getVantaColors();
+            console.log(colors)
+            home_bg.setOptions(colors);
+            projects_bg.setOptions(colors);
+            about_bg.setOptions(colors);
+            contact_bg.setOptions(colors);
+            
+            if (html.getAttribute('theme') === 'dark') {
+                html.setAttribute('theme', 'light')
+                themeButton.textContent = '☀️';
+            } else {
+                html.setAttribute('theme', 'dark')
+                themeButton.textContent = '🌙';
+            }
+        })
+        
+    </script>
+
+    <script>
+        
+        const homeSection = document.querySelector('#home')
+        const projectsSection = document.querySelector("#projects")
+        const helloText = document.querySelectorAll('.hello-text');
+        const softwareEngineerText = document.querySelectorAll('.software-engineer-text')
+        const greetingContainer = document.querySelector('.greeting-container')
+        let overlapHeight = 0;
+        let ticking = false;
+
+        const updateAnimations = () => {
+            const scrollPosition = window.scrollY;
+            const translateValue = Math.min(scrollPosition, overlapHeight);
+            projectsSection.style.transform = `translateY(${-translateValue}px)`;
+
+            const textMovePercentage = scrollPosition * 0.1;
+
+            greetingContainer.style.transform = `translateX(${-textMovePercentage}%)`;
+            // helloText.forEach(t => {
+            //     t.style.transform = `translateX(${-textMovePercentage}%)`;
+            // })
+            
+            // softwareEngineerText.forEach(s => {
+            //     s.style.transform = `translateX(${-textMovePercentage}%)`;
+            // })
+            
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            
+            if (!ticking) {
+                window.requestAnimationFrame(updateAnimations)
+                ticking = true;
+            }
+            
+            overlapHeight = 0
+            updateAnimations();
+        })
+
+        
+    </script>
+    <script>
+        const sections = document.querySelectorAll('section')
+        const options = {
+            root: null,
+            threshold: 0.45
+        };
+
+        const observer = new IntersectionObserver( (entries, observer) => {
+            entries.forEach(entry => {
+                // Find the corresponding nav link for the section
+                const id = entry.target.id;
+                const links = document.querySelectorAll('.nav-link')
+                const navLinks = document.querySelectorAll(`a[href="#${id}"]`);
+
+                
+
+                if (entry.isIntersecting) {
+                    // If the section is in view, add the 'active' class
+
+                    links.forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    navLinks.forEach(navLink => {
+                        navLink.classList.add('active');
+                    })
+                    
+                } else {
+                    navLinks.forEach(navLink => {
+                        // If it's not in view, remove the 'active' class
+                        navLink.classList.remove('active');
+                    })
+                    
+                }
+            });
+        }, options);
+
+        // Tell the observer to watch each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

@@ -2,4 +2,5 @@
 
 Website is currently available at: 
 
-https://hublus.z36.web.core.windows.net
+https://hubertluszkiewicz.github.io/
+

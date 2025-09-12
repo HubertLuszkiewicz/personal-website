@@ -1,6 +1,6 @@
-﻿# personal-website
+# personal-website
 
 Website is currently available at: 
 
-https://hubertluszkiewicz.github.io/
+http://luszkiewicz.pl
 
